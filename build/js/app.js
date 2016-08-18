@@ -10,8 +10,16 @@
 				templateUrl: './views/home.html',
 				controller: 'menuItemController'
 			})
+
 			.when('/nosotros', {
 				templateUrl: './views/nosotros.html'
+			.when('/espacios', {
+				templateUrl: './views/espacios.html',
+				controller: 'menuItemController'
+			})
+			.when('/habitaciones', {
+				templateUrl: './views/habitaciones.html',
+				controller: 'menuItemController'
 			})
 			.otherwise({
 				redirectTo: '/home'
