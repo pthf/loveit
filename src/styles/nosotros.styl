@@ -1,0 +1,120 @@
+$back-height = 45vw
+
+.nosotros-wrapper
+  width 100%
+  height $back-height
+  position relative
+
+.back-layer
+  position absolute
+  width 100%
+  height auto
+  display flex
+  flex-direction row
+  height $back-height
+
+.back-right-layer
+  flex 0 1 30%
+  height 23vw
+  overflow hidden
+
+.back-left-layer
+  flex 0 1 70%
+  overflow hidden
+  height $back-height
+
+.back-left-layer img
+  width: 100%;
+  height 100%
+
+.front-layer
+  width 100%
+  height auto
+  position absolute
+  bottom 0
+  display flex
+  flex-direction row
+  align-items flex-end
+  height 22.5vw
+  z-index 5
+
+.front-right-layer
+  flex: 0 1 34.5%
+  height: 22vw
+  overflow hidden
+  background-image url('../img/bg-2.svg')
+  background-repeat round
+
+
+.front-mid-layer
+  flex 0 1 40.7%
+  height 36vw
+  background-color rgba(223,181,114,.6)
+
+.front-left-layer
+  position relative
+  display flex
+  justify-content flex-start
+  flex 0 1 25%
+  height 20vw
+
+.button-reserve-wrapper
+  position absolute
+  width 100%
+  height auto
+  top 50%
+  text-align center
+
+.button-reserve
+  position relative
+  width 60%
+  height auto
+  padding 15px 20px
+  margin 0 auto;
+  background-color #300008
+  text-align center
+  font-size 16px
+  cursor pointer
+  color #fff
+  text-decoration none
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+a.button-reserve:hover
+  text-decoration: none;
+  color: #fff;
+  opacity .9
+
+span.title-button
+  letter-spacing: 10px;
+  font-weight 100
+  text-align center
+
+@media(max-width 1119px)
+  .front-right-layer,.back-right-layer
+    display none
+
+  $height-responsive = 85vw
+
+  .nosotros-wrapper,.back-layer,.back-left-layer
+    height $height-responsive
+
+  .front-layer
+    height 80vw
+
+  .back-left-layer
+    flex 0 1 100%
+
+  .front-layer
+    flex-direction column
+    justify-content: center;
+    align-items: center;
+
+  .front-left-layer
+    width 100%
+
+  .front-mid-layer
+    flex 0 1 80%
+    width 80%

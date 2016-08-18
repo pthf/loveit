@@ -48,6 +48,15 @@
       }
     };
   })
+  .directive('nosotrosContent', function(){
+    return {
+      restrict: 'E',
+      templateUrl: './partials/nosotros-content.html',
+      controller: function($document){
+
+      }
+    };
+  })
   .directive('gridPhotos', function(){
     return {
       restrict: 'E',
