@@ -54,4 +54,10 @@
       templateUrl: './partials/grid-photos.html'
     }
   })
+  .directive('gridPhotosHabitaciones', function(){
+    return {
+      restrict: 'E',
+      templateUrl: './partials/grid-photos-habitaciones.html'
+    }
+  })
 })();
