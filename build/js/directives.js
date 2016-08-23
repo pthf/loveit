@@ -68,6 +68,26 @@
     };
   })
 
+  .directive('serviciosContent', function(){
+    return {
+      restrict: 'E',
+      templateUrl: './partials/servicios-content.html',
+      controller: function($document){
+
+      }
+    };
+  })
+
+  .directive('serviciosPremiumContent', function(){
+    return {
+      restrict: 'E',
+      templateUrl: './partials/servicios-premium-content.html',
+      controller: function($document){
+
+      }
+    };
+  })
+
   .directive('footerStyle1', function(){
     return {
       restrict: 'E',

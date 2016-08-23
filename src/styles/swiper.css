@@ -24,3 +24,8 @@
   height: calc(100% + 2px);
   width: calc(100% + 2px);
 }
+
+
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets{
+  bottom: 25px;
+}

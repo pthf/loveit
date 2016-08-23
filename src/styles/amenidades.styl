@@ -2,7 +2,7 @@ footer.style-1,.social-wrapper
   display: flex;
   flex-direction row
 
-.amenidades-wrapper
+.amenidades-wrapper,footer.style-1
   margin-left: 6%;
 
 .social-wrapper
@@ -29,6 +29,7 @@ footer.style-1,.social-wrapper
 
 .footer-left-side nav a li
   margin: 1vw 0
+  font-weight: 500
 
 .footer-left-side nav a
   color: black;
@@ -38,6 +39,9 @@ footer.style-1,.social-wrapper
   width: 30px;
   height: 30px;
   cursor: pointer;
+
+.social-icon:hover
+  opacity 0.8
 
 .line-yellow
   position: absolute;
@@ -57,7 +61,7 @@ p.info-contact-text
   padding: 1vw;
 
 .social-wrapper
-  padding: 1vw
+  padding: 1vw 1vw 1vw 0vw
 
 .top-amenidades,.mid-amenidades
   display: flex;
@@ -196,19 +200,19 @@ span.title-box.title-box-bottom
 .bottom-right
   width: 68%;
 
-
-
-
-@media(max-width 768px)
-
+@media(max-width 1199px)
+  .amenidades-wrapper,footer.style-1
+    margin-left: 0%;
+  .mid-right
+    display none
   footer.style-1
-    flex-direction: column;
+    flex-direction: column-reverse;
 
   .footer-left-side,.footer-mid-side,.footer-right-side
     width: 100%
 
   .footer-mid-side
-    height: 30vw
+    height: 20vw
 
   .footer-left-side nav
     text-align: center;
@@ -234,3 +238,70 @@ span.title-box.title-box-bottom
 
   .footer-left-side nav a
     font-size: 14px
+
+  .footer-left-side nav a li
+    margin 3vw 0
+
+  .footer-logo img
+    width: 35%;
+
+  .footer-logo
+    width: 100%;
+    text-align: center;
+    left: 0;
+
+  .line-yellow
+    width 100%
+    top 5%
+
+  .mid-amenidades, .top-amenidades
+    overflow none
+    height auto
+    flex-direction: column;
+
+  .top-left-box
+    flex: 0 1 20%;
+    flex-direction: column;
+    overflow none
+    width: 100%;
+
+  .top-left-top
+    width: 100%;
+    flex: 0 1 100%;
+    height: 60vw;
+
+  .top-left-bottom
+    height 10vw
+
+  .top-right-box
+    flex: 0 1 80%;
+    width: 100%;
+    height: 60vw;
+    overflow: hidden;
+
+  .mid-left
+    width 100%
+
+  span.title-box.title-box-bottom
+    left: 0%;
+    top: 50%;
+    text-align: center;
+
+  .mid-right img
+    height 100%
+
+  .bottom-amenidades
+    flex-direction column
+    height: auto;
+  .bottom-left
+    height 60vw
+  .bottom-right
+    width 100%
+  .bottom-right-bottom
+    height 50vw
+
+  .title-box
+    font-size: 24px;
+
+  .footer-right-side
+    margin 3vw 0

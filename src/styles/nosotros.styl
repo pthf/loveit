@@ -1,4 +1,4 @@
-$back-height = 45vw
+$back-height = 55vw
 
 .nosotros-wrapper
   width 100%
@@ -15,8 +15,11 @@ $back-height = 45vw
 
 .back-right-layer
   flex 0 1 30%
-  height 23vw
+  height $back-height
   overflow hidden
+
+.back-right-layer img
+  height: 60%
 
 .back-left-layer
   flex 0 1 70%
@@ -49,7 +52,7 @@ $back-height = 45vw
 .front-mid-layer
   position: relative;
   flex 0 1 27.7%
-  height 36vw
+  height 40vw
   background-color rgba(223,181,114,.8)
 
 .front-left-layer
@@ -102,14 +105,13 @@ span.title-button
   width: 40%;
 
 .front-mid-wrapper
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   position: relative;
 
 p.layer-text
-  font-size: 12px;
+  font-size: 14px;
   text-align: justify;
-  font-weight: 400;
   color:black
 
 .mid-layer-logo-bottom
@@ -121,6 +123,10 @@ p.layer-text
 
  .mid-layer-logo-bottom img
   width 20%
+
+@media(max-width 1280px)
+  p.layer-text
+    font-size: 13px
 
 @media(max-width 1119px)
   .front-right-layer,.back-right-layer
@@ -156,6 +162,11 @@ p.layer-text
     text-align: center;
     padding: 3vw 0
 
+  .mid-layer-logo-bottom img
+    width 15%
+
+  p.layer-text
+    font-size: 16px
 @media(max-width 768px)
   .back-layer, .back-left-layer, .nosotros-wrapper
     height: 95vw
@@ -167,18 +178,21 @@ p.layer-text
     height: 123vw
   .front-layer
     height: 118vw
-
+  p.layer-text
+    font-size: 14px
 @media(max-width 480px)
   .back-layer, .back-left-layer, .nosotros-wrapper
     height: 145vw
   .front-layer
     height: 135vw
+  p.layer-text
+    font-size: 12px
 
 @media(max-width 440px)
   .back-layer, .back-left-layer, .nosotros-wrapper
-    height: 206vw
+    height: 140vw
   .front-layer
-    height: 199vw
+    height: 135vw
 
 @media(max-width 330px)
   .back-layer, .back-left-layer, .nosotros-wrapper

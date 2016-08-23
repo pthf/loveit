@@ -16,6 +16,12 @@
 			.when('/amenidades', {
 				templateUrl: './views/amenidades.html'
 			})
+			.when('/servicios', {
+				templateUrl: './views/servicios.html'
+			})
+			.when('/servicios-premium', {
+				templateUrl: './views/servicios-premium.html'
+			})
 			.when('/espacios', {
 				templateUrl: './views/espacios.html',
 				controller: 'menuItemController'
