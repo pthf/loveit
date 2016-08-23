@@ -54,6 +54,28 @@
       templateUrl: './partials/nosotros-content.html'
     };
   })
+
+  .directive('amenidadesContent', function(){
+    return {
+      restrict: 'E',
+      templateUrl: './partials/amenidades-content.html',
+      controller: function($document){
+
+      }
+    };
+  })
+
+  .directive('footerStyle1', function(){
+    return {
+      restrict: 'E',
+      templateUrl: './partials/footer-style-1.html',
+      controller: function($document){
+
+      }
+    };
+  })
+
+
   .directive('gridPhotos', function(){
     return {
       restrict: 'E',

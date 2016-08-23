@@ -13,6 +13,9 @@
 			.when('/nosotros', {
 				templateUrl: './views/nosotros.html'
 			})
+			.when('/amenidades', {
+				templateUrl: './views/amenidades.html'
+			})
 			.when('/espacios', {
 				templateUrl: './views/espacios.html',
 				controller: 'menuItemController'
