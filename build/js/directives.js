@@ -51,13 +51,9 @@
   .directive('nosotrosContent', function(){
     return {
       restrict: 'E',
-      templateUrl: './partials/nosotros-content.html',
-      controller: function($document){
-
-      }
+      templateUrl: './partials/nosotros-content.html'
     };
   })
-
   .directive('amenidadesContent', function(){
     return {
       restrict: 'E',
@@ -67,7 +63,6 @@
       }
     };
   })
-
   .directive('serviciosContent', function(){
     return {
       restrict: 'E',
@@ -97,8 +92,6 @@
       }
     };
   })
-
-
   .directive('gridPhotos', function(){
     return {
       restrict: 'E',
@@ -108,7 +101,77 @@
   .directive('gridPhotosHabitaciones', function(){
     return {
       restrict: 'E',
-      templateUrl: './partials/grid-photos-habitaciones.html'
+      templateUrl: './partials/grid-photos-habitaciones.html',
+      controller: function($document){
+        $('.selectHover').click(function(){
+          $("html, body").animate({
+            'scrollTop' : '0'
+          }, 500, function(){});
+          $('#sectionHabitaciones').removeClass('fadeIn');
+          $('#sectionHabitaciones').addClass('fadeOut');
+          $('#sectionHabitaciones').css({'display' : 'none'});
+          $('#informationShow').removeClass('fadeOut');
+          $('#informationShow').css({'display' : 'flex'});
+          $('#informationShow').addClass('fadeIn');
+
+          setTimeout(function(){
+            var mySwiper = new Swiper('.swiper-container',{
+              pagination: '.swiper-pagination',
+              loop:true,
+              grabCursor: false,
+              paginationClickable: true,
+              autoplay:false
+            });
+          },80);
+
+        });
+        $('#informationShow .close').click(function(){
+          $("html, body").animate({
+            'scrollTop' : '0'
+          }, 500, function(){});
+          $('#informationShow').removeClass('fadeIn');
+          $('#informationShow').addClass('fadeOut');
+          $('#informationShow').css({'display' : 'none'});
+          $('#sectionHabitaciones').removeClass('fadeOut');
+          $('#sectionHabitaciones').css({'display' : 'flex'});
+          $('#sectionHabitaciones').addClass('fadeIn');
+        });
+      }
+    }
+  })
+  .directive('roomDescription', function(){
+    return {
+      restrict: 'E',
+      templateUrl: './partials/room-description.html'
+    }
+  })
+  .directive('footerBottomContact', function(){
+    return {
+      restrict: 'E',
+      templateUrl: './partials/footer-bottom-contact.html'
+    }
+  })
+  .directive('swiperSliderRoom', function(){
+    return {
+      restrict: 'E',
+      templateUrl: './partials/swiper-slider-room.html',
+      controller: function($document){
+        setTimeout(function(){
+          var mySwiper = new Swiper('.swiper-container',{
+            pagination: '.swiper-pagination',
+            loop:true,
+            grabCursor: false,
+            paginationClickable: true,
+            autoplay:false
+          });
+        },80);
+      }
+    };
+  })
+  .directive('gridRestaurant', function(){
+    return {
+      restrict: 'E',
+      templateUrl: './partials/grid-restaurant.html'
     }
   })
 })();
