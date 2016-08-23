@@ -7,8 +7,7 @@
 	app.config(['$routeProvider', '$locationProvider' , function($routeProvider, $locationProvider){
 		$routeProvider
 			.when('/home', {
-				templateUrl: './views/home.html',
-				controller: 'menuItemController'
+				templateUrl: './views/home.html'
 			})
 			.when('/nosotros', {
 				templateUrl: './views/nosotros.html'
@@ -17,12 +16,13 @@
 				templateUrl: './views/amenidades.html'
 			})
 			.when('/espacios', {
-				templateUrl: './views/espacios.html',
-				controller: 'menuItemController'
+				templateUrl: './views/espacios.html'
 			})
 			.when('/habitaciones', {
-				templateUrl: './views/habitaciones.html',
-				controller: 'menuItemController'
+				templateUrl: './views/habitaciones.html'
+			})
+			.when('/restaurante', {
+				templateUrl: './views/restaurante.html'
 			})
 			.otherwise({
 				redirectTo: '/home'

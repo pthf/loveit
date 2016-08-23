@@ -54,7 +54,6 @@
       templateUrl: './partials/nosotros-content.html'
     };
   })
-
   .directive('amenidadesContent', function(){
     return {
       restrict: 'E',
@@ -64,7 +63,6 @@
       }
     };
   })
-
   .directive('footerStyle1', function(){
     return {
       restrict: 'E',
@@ -74,8 +72,6 @@
       }
     };
   })
-
-
   .directive('gridPhotos', function(){
     return {
       restrict: 'E',
@@ -107,7 +103,7 @@
               autoplay:false
             });
           },80);
-          
+
         });
         $('#informationShow .close').click(function(){
           $("html, body").animate({
@@ -151,5 +147,11 @@
         },80);
       }
     };
+  })
+  .directive('gridRestaurant', function(){
+    return {
+      restrict: 'E',
+      templateUrl: './partials/grid-restaurant.html'
+    }
   })
 })();
