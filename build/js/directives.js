@@ -163,7 +163,7 @@
 						url: 'php/sendEmail.php',
 						data: data,
 						success : function(result){
-              console.log("Noice");
+              console.log("Enviado.");
 							setTimeout(function(){
 								$('#formContact')[0].reset();
 							}, 1500);
