@@ -2,6 +2,7 @@
   angular.module('loveitSite.controllers', [])
   .controller('menuItemController', ['$scope', '$routeParams', '$location', function($scope, $routeParams, $location){
     $scope.routeParams = $location.path();
+    $scope.itemselected = 0;
     switch ($scope.routeParams) {
       case '/home': $scope.itemselected = 0;  break;
       case '/nosotros': $scope.itemselected = 1;  break;

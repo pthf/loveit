@@ -5,6 +5,14 @@
       restrict: 'E',
       templateUrl: './partials/header-top.html',
       controller: function($document){
+
+        $('li.submenu ul').slideUp(0);
+        $('.servicesOptions').hover(function(){
+          $('li.submenu ul').slideDown();
+        }, function(){
+          $('li.submenu ul').slideUp();
+        });
+
         var status = false;
         var tam = 0;
         function verifySize(){
@@ -72,7 +80,6 @@
       }
     };
   })
-
   .directive('serviciosPremiumContent', function(){
     return {
       restrict: 'E',
@@ -82,7 +89,6 @@
       }
     };
   })
-
   .directive('footerStyle1', function(){
     return {
       restrict: 'E',
