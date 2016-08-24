@@ -22,4 +22,19 @@
       $scope.item = item;
     }
   }])
+
+  .controller('ExampleController', ['$scope', function($scope) {
+    $scope.data = {};
+    $scope.text = '';
+    $scope.submit = function() {
+      $scope.data = $scope.user;
+      console.log($scope.data);
+      // if ($scope.text) {
+      //   $scope.user.push(this.text);
+      //   $scope.text = '';
+      // }
+    };
+  }]);
+
+
 })();

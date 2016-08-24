@@ -15,23 +15,35 @@
     </div>
     <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12"></div>
     <div class="col-lg-4 col-md-4 col-sm-5 col-xs-10">
-      <form id="formContact">
+
+
+
+      <form id="formContact" ng-submit="submit()" ng-controller="ExampleController">
+
         <label for="name">
           <span>NOMBRE</span>
-          <input type="text" id="name" name="name" required></input>
+          <input type="text" id="name" name="name" ng-model="user.name" required></input>
         </label>
+
         <label for="email">
           <span>CORREO</span>
-          <input type="email" id="email" name="email" required></input>
+          <input type="email" id="email" name="email" ng-model="user.email" required></input>
         </label>
+
         <label for="message" class="message">
           <span>MENSAJE</span>
-          <textarea id="message" name="message" required></textarea>
+          <textarea id="message" name="message" ng-model="user.message" required></textarea>
         </label>
+
         <label for="send" class="send">
           <input id="send" type="submit" value="Enviar"></input>
         </label>
+
       </form>
+
+
+
+
     </div>
     <div class="col-lg-3 col-md-3 col-sm-1 col-xs-12"></div>
   </div>

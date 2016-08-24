@@ -148,7 +148,28 @@
   .directive('footerBottomContact', function(){
     return {
       restrict: 'E',
-      templateUrl: './partials/footer-bottom-contact.html'
+      templateUrl: './partials/footer-bottom-contact.html',
+      controller: function($document){
+				$('#formContact').submit(function(e){
+					var data = $(this).serialize();
+					$.ajax({
+						type: 'POST',
+						url: 'php/sendEmail.php',
+						data: data,
+						success : function(result){
+              console.log("Noice");
+							setTimeout(function(){
+								$('#formContact')[0].reset();
+							}, 1500);
+						},
+						error: function(){
+							console.log('error');
+						},
+						timeout: 10000
+					});
+					e.preventDefault();
+				});
+			}
     }
   })
   .directive('swiperSliderRoom', function(){
