@@ -20,8 +20,13 @@
         <a href="#amenidades"><li ng-click="changerute(3)" ng-class="{'selected': itemselected === 3 , 'hvr-underline-from-center': itemselected != 3 }" >AMENIDADES</li></a>
         <a href="#habitaciones"><li ng-click="changerute(4)" ng-class="{'selected': itemselected === 4 , 'hvr-underline-from-center': itemselected != 4 }" >HABITACIONES</li></a>
         <a href="#restaurante"><li ng-click="changerute(5)" ng-class="{'selected': itemselected === 5 , 'hvr-underline-from-center': itemselected != 5 }" >RESTAURANTE</li></a>
-        <a href="#servicios"><li ng-click="changerute(6)" ng-class="{'selected': itemselected === 6 , 'hvr-underline-from-center': itemselected != 6 }" >SERVICIOS</li></a>
-
+        <li class="submenu servicesOptions">
+          SERVICIOS
+          <ul>
+            <a href="#servicios"><li ng-click="changerute(6)">SERVICIOS LOVEIT</li></a>
+            <a href="#servicios-premium"><li ng-click="changerute(6)">PREMIUM</li></a>
+          </ul>
+        </li>
       </ul>
     </div>
   </div>
