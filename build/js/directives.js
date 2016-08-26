@@ -121,7 +121,7 @@
           $('#informationShow').addClass('fadeIn');
 
           setTimeout(function(){
-            var mySwiper = new Swiper('.swiper-container',{
+            var mySwiper2 = new Swiper('.swiper-container',{
               pagination: '.swiper-pagination',
               loop:true,
               grabCursor: false,
@@ -183,15 +183,17 @@
       restrict: 'E',
       templateUrl: './partials/swiper-slider-room.html',
       controller: function($document){
-        setTimeout(function(){
-          var mySwiper = new Swiper('.swiper-container',{
-            pagination: '.swiper-pagination',
+
+        $( ".selectHover" ).click(function() {
+          var mySwiper3 = new Swiper('.swiper-room',{
+            pagination: '.swipper-pagination-room',
             loop:true,
             grabCursor: false,
             paginationClickable: true,
             autoplay:false
           });
-        },80);
+        });
+
       }
     };
   })
