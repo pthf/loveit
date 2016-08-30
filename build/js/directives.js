@@ -131,7 +131,15 @@
           },80);
 
         });
-        $('#informationShow .close').click(function(){
+      }
+    }
+  })
+  .directive('roomDescription', function(){
+    return {
+      restrict: 'E',
+      templateUrl: './partials/room-description.html',
+      controller: function($document){
+        $('.closeDescription').click(function(){
           $("html, body").animate({
             'scrollTop' : '0'
           }, 500, function(){});
@@ -143,12 +151,6 @@
           $('#sectionHabitaciones').addClass('fadeIn');
         });
       }
-    }
-  })
-  .directive('roomDescription', function(){
-    return {
-      restrict: 'E',
-      templateUrl: './partials/room-description.html'
     }
   })
   .directive('footerBottomContact', function(){
