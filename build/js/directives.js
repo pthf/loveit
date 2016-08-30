@@ -45,8 +45,8 @@
       templateUrl: './partials/swiper-slider.html',
       controller: function($document){
         setTimeout(function(){
-          var mySwiper = new Swiper('.swiper-container',{
-            pagination: '.swiper-pagination',
+          var mySwiper = new Swiper('.swiper-home',{
+            pagination: '.home-pagination',
             loop:true,
             grabCursor: false,
             paginationClickable: true,
@@ -67,6 +67,39 @@
       restrict: 'E',
       templateUrl: './partials/amenidades-content.html',
       controller: function($document){
+        $('.top-left-top,.top-left-bottom,.top-right-box,.mid-left-bottom,.bottom-left,.bottom-right-bottom').click(function(){
+          $("html, body").animate({
+            'scrollTop' : '0'
+          }, 500, function(){});
+          $('.amenidades-wrapper').removeClass('fadeIn');
+          $('.amenidades-wrapper').addClass('fadeOut');
+          $('.amenidades-wrapper').css({'display' : 'none'});
+          $('#informationShow').removeClass('fadeOut');
+          $('#informationShow').css({'display' : 'flex'});
+          $('#informationShow').addClass('fadeIn');
+
+          setTimeout(function(){
+            var mySwiper2 = new Swiper('.swiper-container',{
+              pagination: '.swiper-pagination',
+              loop:true,
+              grabCursor: false,
+              paginationClickable: true,
+              autoplay:false
+            });
+          },80);
+
+        });
+        $('#informationShow .close').click(function(){
+          $("html, body").animate({
+            'scrollTop' : '0'
+          }, 500, function(){});
+          $('#informationShow').removeClass('fadeIn');
+          $('#informationShow').addClass('fadeOut');
+          $('#informationShow').css({'display' : 'none'});
+          $('.amenidades-wrapper').removeClass('fadeOut');
+          $('.amenidades-wrapper').css({'display' : 'block'});
+          $('.amenidades-wrapper').addClass('fadeIn');
+        });
 
       }
     };
@@ -101,7 +134,42 @@
   .directive('gridPhotos', function(){
     return {
       restrict: 'E',
-      templateUrl: './partials/grid-photos.html'
+      templateUrl: './partials/grid-photos.html',
+      controller: function($document){
+        $('.topImage,.bottomImage,.leftBox').click(function(){
+          $("html, body").animate({
+            'scrollTop' : '0'
+          }, 500, function(){});
+          $('#sectionSpaces').removeClass('fadeIn');
+          $('#sectionSpaces').addClass('fadeOut');
+          $('#sectionSpaces').css({'display' : 'none'});
+          $('#informationShow').removeClass('fadeOut');
+          $('#informationShow').css({'display' : 'flex'});
+          $('#informationShow').addClass('fadeIn');
+
+          setTimeout(function(){
+            var mySwiper2 = new Swiper('.swiper-container',{
+              pagination: '.swiper-pagination',
+              loop:true,
+              grabCursor: false,
+              paginationClickable: true,
+              autoplay:false
+            });
+          },80);
+
+        });
+        $('#informationShow .close').click(function(){
+          $("html, body").animate({
+            'scrollTop' : '0'
+          }, 500, function(){});
+          $('#informationShow').removeClass('fadeIn');
+          $('#informationShow').addClass('fadeOut');
+          $('#informationShow').css({'display' : 'none'});
+          $('#sectionSpaces').removeClass('fadeOut');
+          $('#sectionSpaces').css({'display' : 'flex'});
+          $('#sectionSpaces').addClass('fadeIn');
+        });
+      }
     }
   })
   .directive('gridPhotosHabitaciones', function(){

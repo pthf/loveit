@@ -5,6 +5,9 @@ footer.style-1,.social-wrapper
 .amenidades-wrapper,footer.style-1
   margin-left: 6%;
 
+.top-left-top,.top-left-bottom,.top-right-box,.mid-left-bottom,.bottom-left,.bottom-right-bottom,.topImage,.bottomImage,.leftBox
+  cursor: pointer;
+
 .social-wrapper
   width: 60%;
   justify-content: space-between;
@@ -69,8 +72,13 @@ p.info-contact-text
   flex-direction: row;
   align-items: center;
   width: 100%;
-  height 40vw
   overflow hidden
+
+.mid-amenidades
+  height: 40vw
+
+.top-amenidades
+  height: 35vw
 
 .top-right-box
   flex: 0 1 80%;
@@ -89,7 +97,7 @@ p.info-contact-text
   left: 0;
   top: 50%;
   text-align: center;
-  font-size: 20px;
+  font-size: 16px;
   color: #fff;
   font-weight: 300
   letter-spacing: 5px;
@@ -213,7 +221,11 @@ span.title-box.title-box-bottom
     flex-direction: column;
     justify-content: center;
 
-@media(max-width 1199px)
+@media(max-width 1024px)
+  .title-box
+    font-size: 14px
+
+@media(max-width 768px)
   .amenidades-wrapper,footer.style-1
     margin-left: 0%;
   .mid-right
@@ -240,7 +252,7 @@ span.title-box.title-box-bottom
     left: 66%;
 
   .social-wrapper
-    width: 22%;
+    width: 40%;
     margin: 0 auto;
 
   .info-contact
@@ -290,7 +302,7 @@ span.title-box.title-box-bottom
   .top-left-top
     width: 100%;
     flex: 0 1 100%;
-    height: 60vw;
+    height: 50vw;
 
   .top-left-bottom
     height 10vw
@@ -298,7 +310,7 @@ span.title-box.title-box-bottom
   .top-right-box
     flex: 0 1 80%;
     width: 100%;
-    height: 60vw;
+    height: 50vw;
     overflow: hidden;
 
   .mid-left
@@ -315,15 +327,21 @@ span.title-box.title-box-bottom
   .bottom-amenidades
     flex-direction column
     height: auto;
+
   .bottom-left
-    height 60vw
+    height 50vw
+
   .bottom-right
     width 100%
+
   .bottom-right-bottom
     height 50vw
 
-  .title-box
-    font-size: 24px;
-
   .footer-right-side
     margin 3vw 0
+
+  .bottom-amenidades
+    height: 120vw
+
+  div.mid-amenidades
+    height: 40vw
