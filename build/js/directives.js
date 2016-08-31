@@ -89,18 +89,6 @@
           },80);
 
         });
-        $('#informationShow .close').click(function(){
-          $("html, body").animate({
-            'scrollTop' : '0'
-          }, 500, function(){});
-          $('#informationShow').removeClass('fadeIn');
-          $('#informationShow').addClass('fadeOut');
-          $('#informationShow').css({'display' : 'none'});
-          $('.amenidades-wrapper').removeClass('fadeOut');
-          $('.amenidades-wrapper').css({'display' : 'block'});
-          $('.amenidades-wrapper').addClass('fadeIn');
-        });
-
       }
     };
   })
@@ -158,7 +146,8 @@
           },80);
 
         });
-        $('#informationShow .close').click(function(){
+        $('.closeDescriptionAmenidades').click(function(){
+          alert('ok');
           $("html, body").animate({
             'scrollTop' : '0'
           }, 500, function(){});
@@ -271,6 +260,46 @@
     return {
       restrict: 'E',
       templateUrl: './partials/grid-restaurant.html'
+    }
+  })
+  .directive('galleryDescription', function(){
+    return {
+      restrict: 'E',
+      templateUrl: './partials/gallery-description.html',
+      controller: function($document){
+        $('.closeDescriptionAmenidades').click(function(){
+          $("html, body").animate({
+            'scrollTop' : '0'
+          }, 500, function(){});
+          $('#informationShow').removeClass('fadeIn');
+          $('#informationShow').addClass('fadeOut');
+          $('#informationShow').css({'display' : 'none'});
+          $('.amenidades-wrapper').removeClass('fadeOut');
+          $('.amenidades-wrapper').css({'display' : 'block'});
+          $('.amenidades-wrapper').addClass('fadeIn');
+        });
+
+      }
+    }
+  })
+  .directive('galleryDescriptionSpaces', function(){
+    return {
+      restrict: 'E',
+      templateUrl: './partials/gallery-description-spaces.html',
+      controller: function($document){
+        $('.closeDescriptionSpaces').click(function(){
+          $("html, body").animate({
+            'scrollTop' : '0'
+          }, 500, function(){});
+          $('#informationShow').removeClass('fadeIn');
+          $('#informationShow').addClass('fadeOut');
+          $('#informationShow').css({'display' : 'none'});
+          $('#sectionSpaces').removeClass('fadeOut');
+          $('#sectionSpaces').css({'display' : 'block'});
+          $('#sectionSpaces').addClass('fadeIn');
+        });
+
+      }
     }
   })
 })();
